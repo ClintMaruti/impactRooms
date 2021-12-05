@@ -2,23 +2,22 @@ import React from "react";
 import {
   DashboardCard,
   DashboardInfo,
-  DashHeader,
   Icon,
   Title,
   SpecialIcon,
+  CompanyInfo,
 } from "./style";
 import { IoTelescope } from "react-icons/io5";
 import { AiTwotoneTrophy } from "react-icons/ai";
 import { MdStars } from "react-icons/md";
-import { FaAws } from "react-icons/fa";
-import { MdOutlineSupervisedUserCircle } from "react-icons/md";
+import { Tooltip } from "@material-ui/core";
 
 const Dashboard = () => {
   return (
     <DashboardCard>
-      <DashHeader>
+      <CompanyInfo>
         <Title>Dashboard</Title>
-      </DashHeader>
+      </CompanyInfo>
       <DashboardInfo>
         <Icon>
           <IoTelescope />
@@ -35,11 +34,13 @@ const Dashboard = () => {
           <AiTwotoneTrophy />
         </Icon>
         <div>
-          <div>Incentives</div>
+          <div>Tokens</div>
           <SpecialIcon>
-            <MdStars />
-            <FaAws />
-            <MdOutlineSupervisedUserCircle />
+            <Tooltip title="Early-bird token" placement="top">
+              <div style={{ color: "green", fontSize: "22px" }}>
+                <MdStars />
+              </div>
+            </Tooltip>
           </SpecialIcon>
         </div>
       </DashboardInfo>

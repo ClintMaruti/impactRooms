@@ -35,12 +35,18 @@ export const Icon = styled.p`
   padding-right: 20px;
 `;
 
+export const SecondrayIcon = styled.img`
+  padding-right: 20px;
+  width: 20px;
+  height: 20px;
+`;
+
 export const SpecialIcon = styled.p`
   display: flex;
   justify-content: space-between;
   font-size: 30px;
   color: #003f6f;
-  padding-right: 20px;
+  padding-right: 15px;
 `;
 
 // Dashboard
@@ -49,10 +55,12 @@ export const DashboardCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e5e5;
-  width: 1300px;
+  max-width: 1300px;
   margin-left: 25px;
   color: #3c4050;
   font-size: 12px;
+  height: 200px;
+  margin-bottom: 10px;
 `;
 
 export const DashHeader = styled.div`
@@ -69,4 +77,20 @@ export const DashboardInfo = styled.div`
   height: 80px;
   border-bottom: 1px solid #e5e5e5;
   padding-left: 1rem;
+`;
+
+export const BlurSection = styled.div`
+  padding-top: 18px;
+  position: relative;
+  filter: blur(3px);
+`;
+
+export const ComingSoon = styled.div`
+  position: absolute;
+  margin: 0 auto;
+`;
+
+export const InfoIcon = styled.div`
+  position: absolute;
+  right: 40px;
 `;

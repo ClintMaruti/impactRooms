@@ -9,6 +9,8 @@ import Box from "@material-ui/core/Box";
 import { DashboardCard, ProfileCard } from "./style";
 import CompanyInformation from "./CompanyInformation";
 import Dashboard from "./Dashboard";
+import MarketNews from "./MarketNews";
+import ImpactScore from "./ImpactScore";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -83,7 +85,11 @@ export default function EvaluationTabs() {
       <TabPanel value={value} index={0}>
         <ProfileCard>
           <CompanyInformation />
-          <Dashboard />
+          <div>
+            <Dashboard />
+            <MarketNews />
+            <ImpactScore />
+          </div>
         </ProfileCard>
       </TabPanel>
       <TabPanel value={value} index={1}></TabPanel>

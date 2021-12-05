@@ -37,8 +37,8 @@ const Hero = () => {
           <CompanyID>Company ID: #0007</CompanyID>
         </CompanySection>
         <ButtonSection>
-          <ChatWithUs to="#">Chat With Us</ChatWithUs>
-          <EditProfile to="#">Edit Profile</EditProfile>
+          {/* <ChatWithUs to="#">Chat With Us</ChatWithUs> */}
+          {/* <EditProfile to="#">Edit Profile</EditProfile> */}
         </ButtonSection>
       </Header>
     </div>
