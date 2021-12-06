@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Logo } from "./styles";
+import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./styles";
 import logo from "../../assets/imgs/IRlogo.png"
 
 function NavBar() {
