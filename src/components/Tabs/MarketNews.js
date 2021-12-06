@@ -10,6 +10,7 @@ import {
 import Innovesta from "../../assets/imgs/Innovesta.png";
 import news from "../../assets/imgs/news.png";
 import news1 from "../../assets/imgs/news1.jpeg";
+import { Tooltip } from "@material-ui/core";
 
 const MarketNews = () => {
   return (
@@ -19,9 +20,11 @@ const MarketNews = () => {
           <img src={Innovesta} alt="Innovesta" width="20px" height="20px" />
         </SpecialIcon>
         <Title>Market News</Title>
-        <InfoIcon>
-          <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
-        </InfoIcon>
+        <Tooltip title="Coming Soon" placement="top">
+          <InfoIcon>
+            <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
+          </InfoIcon>
+        </Tooltip>
       </DashHeader>
       <BlurSection>
         <img

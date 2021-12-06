@@ -11,6 +11,9 @@ import CompanyInformation from "./CompanyInformation";
 import Dashboard from "./Dashboard";
 import MarketNews from "./MarketNews";
 import ImpactScore from "./ImpactScore";
+import Evaluation from "./evaluation";
+import Resources from "./resource";
+import Shortlist from "./shortlist";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,9 +95,16 @@ export default function EvaluationTabs() {
           </div>
         </ProfileCard>
       </TabPanel>
-      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={1}>
+        <ProfileCard>
+          <Evaluation />
+        </ProfileCard>
+      </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Shortlist />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Resources />
       </TabPanel>
     </div>
   );

@@ -9,7 +9,7 @@ const CompanyInformation = () => {
   return (
     <CompanyInfoCard>
       <CompanyInfo>
-        <Title>Company Overview</Title>{" "}
+        <Title>Company Overview</Title>
       </CompanyInfo>
       <CompanyInfo>
         <Icon>

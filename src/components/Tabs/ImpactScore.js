@@ -9,6 +9,7 @@ import {
 } from "./style";
 import impctNexus from "../../assets/imgs/impctNexus.png";
 import impactOverview from "../../assets/imgs/impctOverview.png";
+import { Tooltip } from "@material-ui/core";
 
 const ImpactScore = () => {
   return (
@@ -18,9 +19,11 @@ const ImpactScore = () => {
           <img src={impctNexus} alt="Nexus" width="20px" height="20px" />
         </SpecialIcon>
         <Title>Impact Score</Title>
-        <InfoIcon>
-          <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
-        </InfoIcon>
+        <Tooltip title="Coming Soon" placement="top">
+          <InfoIcon>
+            <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
+          </InfoIcon>
+        </Tooltip>
       </DashHeader>
       <BlurSection>
         <img

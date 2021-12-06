@@ -6,6 +6,7 @@ import {
   Title,
   SpecialIcon,
   CompanyInfo,
+  InfoIcon,
 } from "./style";
 import { IoTelescope } from "react-icons/io5";
 import { AiTwotoneTrophy } from "react-icons/ai";
@@ -23,6 +24,11 @@ const Dashboard = () => {
           <IoTelescope />
         </Icon>
         <div>
+          <Tooltip title="Coming Soon" placement="top">
+            <InfoIcon>
+              <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
+            </InfoIcon>
+          </Tooltip>
           <div>Overview</div>
           <Title>
             Full-stack ecommerce ecosystem for SME mercahnts across Kenya
@@ -34,6 +40,11 @@ const Dashboard = () => {
           <AiTwotoneTrophy />
         </Icon>
         <div>
+          <Tooltip title="Coming Soon" placement="top">
+            <InfoIcon>
+              <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
+            </InfoIcon>
+          </Tooltip>
           <div>Tokens</div>
           <SpecialIcon>
             <Tooltip title="Early-bird token" placement="top">

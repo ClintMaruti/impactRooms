@@ -59,7 +59,7 @@ export const DashboardCard = styled.div`
   margin-left: 25px;
   color: #3c4050;
   font-size: 12px;
-  height: 200px;
+  /* height: 200px; */
   margin-bottom: 10px;
 `;
 
