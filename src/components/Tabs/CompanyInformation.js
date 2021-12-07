@@ -5,7 +5,7 @@ import { ImHome } from "react-icons/im";
 import { RiCameraLensLine, RiAccountCircleFill } from "react-icons/ri";
 import { FaLaptopCode } from "react-icons/fa";
 
-const CompanyInformation = () => {
+const CompanyInformation = ({ data }) => {
   return (
     <CompanyInfoCard>
       <CompanyInfo>
@@ -17,7 +17,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Account Owner</div>
-          <Title>Joe Wambugu, CEO & Founder</Title>
+          <Title>{`${data[0]?.first_name} ${data[0]?.owner}`}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -26,7 +26,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Headquartered</div>
-          <Title>Nairobi, Kenya</Title>
+          <Title>{data[0]?.country}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -35,7 +35,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Sector</div>
-          <Title>Ecommerce & Retail, Software</Title>
+          <Title>{data[0]?.sector}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -44,7 +44,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Funding Stage</div>
-          <Title>Pre-Seed</Title>
+          <Title>{data[0]?.stage_of_funding}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -53,7 +53,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Funding Range</div>
-          <Title>$1m to $2m</Title>
+          <Title>{data[0]?.funding}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -62,7 +62,7 @@ const CompanyInformation = () => {
         </Icon>
         <div>
           <div>Website</div>
-          <Title>www.cartnshop.com</Title>
+          <Title>{data[0]?.website}</Title>
         </div>
       </CompanyInfo>
     </CompanyInfoCard>

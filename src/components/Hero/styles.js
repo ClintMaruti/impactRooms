@@ -21,8 +21,8 @@ export const CompanyLogo = styled.img`
 
 export const CompanyID = styled.div`
   position: absolute;
-  padding-top: 3.5rem;
-  padding-left: 8.8rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
   font-size: 10px;
   color: #909090;
 `;

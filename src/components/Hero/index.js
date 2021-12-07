@@ -24,17 +24,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Hero = () => {
+const Hero = ({ data }) => {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <Header>
         <CompanySection>
-          <CompanyLogo src={cart} />
-          <Status>In Que</Status>
-          <span style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</span>
-          <CompanyID>Company ID: #0007</CompanyID>
+          <CompanyLogo src={data[0]?.logo} />
+          <div style={{ display: "flex" }}>
+            <Status>In Que</Status>
+            <span
+              style={{
+                paddingLeft: "5px",
+                color: "#909090",
+                marginTop: "-2px",
+              }}
+            >
+              &#9432;
+            </span>
+            <CompanyID> {`Company ID: ${data[0]?.email}`} </CompanyID>
+          </div>
         </CompanySection>
         <ButtonSection>
           {/* <ChatWithUs to="#">Chat With Us</ChatWithUs> */}

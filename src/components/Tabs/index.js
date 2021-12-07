@@ -11,9 +11,9 @@ import CompanyInformation from "./CompanyInformation";
 import Dashboard from "./Dashboard";
 import MarketNews from "./MarketNews";
 import ImpactScore from "./ImpactScore";
-import Evaluation from "./evaluation";
-import Resources from "./resource";
-import Shortlist from "./shortlist";
+import Evaluation from "./Evaluation";
+import Resources from "./Resource";
+import Shortlist from "./Shortlist";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function EvaluationTabs() {
+export default function EvaluationTabs({ data }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -87,7 +87,7 @@ export default function EvaluationTabs() {
       </AppBar>
       <TabPanel value={value} index={0}>
         <ProfileCard>
-          <CompanyInformation />
+          <CompanyInformation data={data} />
           <div>
             <Dashboard />
             <MarketNews />

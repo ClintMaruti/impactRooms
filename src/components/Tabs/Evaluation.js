@@ -2,7 +2,7 @@ import React from "react";
 import evalImage from "../../assets/imgs/evaluation.JPG";
 import { BlurSection, ProfileCard } from "./style";
 
-const Evaluation = () => {
+const Evaluation = ({ data }) => {
   return (
     <ProfileCard>
       <BlurSection>
