@@ -12,6 +12,9 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { getData } from "../../utils/api";
+import { Navigate } from "react-router-dom";
+import DangerAlert from "../Alert";
 
 function Copyright(props) {
   return (
@@ -34,18 +37,35 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+  const [user, setUser] = React.useState(null);
+  const [error, setError] = React.useState(null);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    // console.log({
+    //   email: data.get("email"),
+    //   password: data.get("password"),
+    // });
+    // data.list.find( record => record.name === "my Name")
+    const email = data.get("email");
+    const password = data.get("password");
+    try {
+      getData()
+        .then((data) => {
+          const result = data.find((record) => record.email === email);
+          setUser(result.email);
+        })
+        .catch((error) => setError(error));
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
     <ThemeProvider theme={theme}>
+      {error && <DangerAlert />}
+      {user && <Navigate to={`/evaluation/${user}`} />}
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box

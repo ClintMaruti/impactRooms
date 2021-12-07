@@ -17,7 +17,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Account Owner</div>
-          <Title>{`${data[0]?.first_name} ${data[0]?.owner}`}</Title>
+          <Title>{`${data?.first_name} ${data?.owner}`}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -26,7 +26,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Headquartered</div>
-          <Title>{data[0]?.country}</Title>
+          <Title>{data?.country}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -35,7 +35,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Sector</div>
-          <Title>{data[0]?.sector}</Title>
+          <Title>{data?.sector}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -44,7 +44,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Funding Stage</div>
-          <Title>{data[0]?.stage_of_funding}</Title>
+          <Title>{data?.stage_of_funding}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -53,7 +53,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Funding Range</div>
-          <Title>{data[0]?.funding}</Title>
+          <Title>{data?.funding}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
@@ -62,7 +62,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Website</div>
-          <Title>{data[0]?.website}</Title>
+          <Title>{data?.website}</Title>
         </div>
       </CompanyInfo>
     </CompanyInfoCard>

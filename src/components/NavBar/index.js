@@ -47,7 +47,7 @@ function NavBar() {
               Investors
             </a>
           </NavItem>
-          <NavLink to="/evaluation" activeStyle>
+          <NavLink to="/evaluation/:email" activeStyle>
             Companies
           </NavLink>
           <NavItem>

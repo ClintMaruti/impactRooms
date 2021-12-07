@@ -30,7 +30,7 @@ const Hero = ({ data }) => {
     <div className={classes.root}>
       <Header>
         <CompanySection>
-          <CompanyLogo src={data[0]?.logo} />
+          <CompanyLogo src={data?.logo} />
           <div style={{ display: "flex" }}>
             <Status>In Que</Status>
             <span
@@ -42,7 +42,7 @@ const Hero = ({ data }) => {
             >
               &#9432;
             </span>
-            <CompanyID> {`Company ID: ${data[0]?.email}`} </CompanyID>
+            <CompanyID> {`Company ID: ${data?.email}`} </CompanyID>
           </div>
         </CompanySection>
         <ButtonSection>

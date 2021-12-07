@@ -12,7 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Evaluation />} />
-        <Route path="/evaluation" element={<Evaluation />} />
+        <Route path="/evaluation/:email" element={<Evaluation />} />
         <Route path="/signin" element={<SignPage />} />
       </Routes>
     </Router>
