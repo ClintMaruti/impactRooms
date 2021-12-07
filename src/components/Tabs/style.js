@@ -55,7 +55,7 @@ export const DashboardCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e5e5;
-  max-width: 1300px;
+  max-width: 1900px;
   margin-left: 25px;
   color: #3c4050;
   font-size: 12px;
@@ -86,8 +86,23 @@ export const BlurSection = styled.div`
 `;
 
 export const ComingSoon = styled.div`
-  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 25%;
+  padding-top: 30px;
   margin: 0 auto;
+  position: absolute;
+  z-index: 9999;
+`;
+
+export const ComingSoonInner = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 40%;
+  padding-top: 12px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 9999;
 `;
 
 export const InfoIcon = styled.div`

@@ -13,7 +13,12 @@ import { AiTwotoneTrophy } from "react-icons/ai";
 import { MdStars } from "react-icons/md";
 import { Tooltip } from "@material-ui/core";
 
-const Dashboard = () => {
+const popUp = {
+  Token:
+    "Tokens unlock powerups and incentives for your company. Earn them by completing your evaluation and improving your profile.",
+};
+
+const Dashboard = ({ data }) => {
   return (
     <DashboardCard>
       <CompanyInfo>
@@ -24,15 +29,8 @@ const Dashboard = () => {
           <IoTelescope />
         </Icon>
         <div>
-          <Tooltip title="Coming Soon" placement="top">
-            <InfoIcon>
-              <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
-            </InfoIcon>
-          </Tooltip>
           <div>Overview</div>
-          <Title>
-            Full-stack ecommerce ecosystem for SME mercahnts across Kenya
-          </Title>
+          <Title>{data?.company_descr}</Title>
         </div>
       </DashboardInfo>
       <DashboardInfo>
@@ -40,14 +38,14 @@ const Dashboard = () => {
           <AiTwotoneTrophy />
         </Icon>
         <div>
-          <Tooltip title="Coming Soon" placement="top">
+          <Tooltip title={popUp.Token} placement="top">
             <InfoIcon>
               <p style={{ paddingLeft: "5px", color: "#909090" }}>&#9432;</p>
             </InfoIcon>
           </Tooltip>
           <div>Tokens</div>
           <SpecialIcon>
-            <Tooltip title="Early-bird token" placement="top">
+            <Tooltip title="Early-Bird Token" placement="top">
               <div style={{ color: "green", fontSize: "22px" }}>
                 <MdStars />
               </div>

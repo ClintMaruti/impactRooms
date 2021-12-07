@@ -8,9 +8,11 @@ import {
   NavBtnLink,
   NavItem,
 } from "./styles";
+import { useParams } from "react-router-dom";
 import logo from "../../assets/imgs/IRlogo.png";
 
-function NavBar() {
+function NavBar({ params }) {
+  const { email } = useParams();
   return (
     <>
       <Nav>
@@ -61,7 +63,9 @@ function NavBar() {
           </NavItem>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/signin">
+            {email === "email" ? `Sign In` : `Sign Out`}
+          </NavBtnLink>
         </NavBtn>
       </Nav>
     </>

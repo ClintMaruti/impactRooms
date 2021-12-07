@@ -3,7 +3,7 @@ import Hero from "../../components/Hero";
 import { useParams } from "react-router-dom";
 import EvaluationTabs from "../../components/Tabs";
 
-const Evaluation = ({ params }) => {
+const Evaluation = () => {
   const [data, setData] = useState([]);
   const { email } = useParams();
 

@@ -19,6 +19,14 @@ export const CompanyLogo = styled.img`
   margin-left: 50px;
 `;
 
+export const CompanyName = styled.h1`
+  font-size: 24px;
+  margin-bottom: 3px;
+  margin-top: -55px;
+  margin-left: 1rem;
+  position: absolute;
+`;
+
 export const CompanyID = styled.div`
   position: absolute;
   padding-top: 2rem;

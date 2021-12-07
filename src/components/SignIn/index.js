@@ -39,6 +39,7 @@ const theme = createTheme();
 
 export default function SignIn() {
   const [user, setUser] = React.useState(null);
+  const [password, setPassword] = React.useState(null);
   const [error, setError] = React.useState(null);
   const [load, setLoad] = React.useState(false);
   const handleSubmit = (event) => {
@@ -57,6 +58,7 @@ export default function SignIn() {
         .then((data) => {
           const result = data.find((record) => record.email === email);
           setUser(result.email);
+          setPassword(result.password);
           setLoad(true);
         })
         .catch((error) => setError(error));
@@ -68,7 +70,7 @@ export default function SignIn() {
   return (
     <ThemeProvider theme={theme}>
       {error && <DangerAlert />}
-      {user && <Navigate to={`/evaluation/${user}`} />}
+      {user && password && <Navigate to={`/evaluation/${user}`} />}
       {load && <Spinner />}
       <Container component="main" maxWidth="xs">
         <CssBaseline />

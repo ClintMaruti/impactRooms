@@ -9,6 +9,7 @@ import {
   CompanyID,
   ChatWithUs,
   EditProfile,
+  CompanyName,
 } from "./styles";
 import cart from "../../assets/imgs/cns-logo.png";
 
@@ -31,13 +32,16 @@ const Hero = ({ data }) => {
       <Header>
         <CompanySection>
           <CompanyLogo src={data?.logo} />
+          <div>
+            <CompanyName> {data?.company_name}</CompanyName>
+          </div>
           <div style={{ display: "flex" }}>
             <Status>In Que</Status>
             <span
               style={{
                 paddingLeft: "5px",
                 color: "#909090",
-                marginTop: "-2px",
+                marginTop: "-3px",
               }}
             >
               &#9432;

@@ -77,7 +77,7 @@ export default function EvaluationTabs({ data }) {
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
-          indicatorColor="primary"
+          indicatorColor="secondary"
         >
           <Tab label="Profile" {...a11yProps(0)} className={classes.tab} />
           <Tab label="Evaluation" {...a11yProps(1)} className={classes.tab} />
@@ -89,7 +89,7 @@ export default function EvaluationTabs({ data }) {
         <ProfileCard>
           <CompanyInformation data={data} />
           <div>
-            <Dashboard />
+            <Dashboard data={data} />
             <MarketNews />
             <ImpactScore />
           </div>

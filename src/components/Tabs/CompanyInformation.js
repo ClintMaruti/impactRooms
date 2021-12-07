@@ -35,7 +35,7 @@ const CompanyInformation = ({ data }) => {
         </Icon>
         <div>
           <div>Sector</div>
-          <Title>{data?.sector}</Title>
+          <Title>{`${data?.primary_market} , ${data?.sector}`}</Title>
         </div>
       </CompanyInfo>
       <CompanyInfo>
