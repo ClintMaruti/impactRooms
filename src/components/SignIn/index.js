@@ -52,13 +52,16 @@ export default function SignIn() {
     // });
     // data.list.find( record => record.name === "my Name")
     const email = data.get("email");
-    const password = data.get("password");
+    const usrPassword = data.get("password");
     try {
       getData()
         .then((data) => {
           const result = data.find((record) => record.email === email);
+          const pwd = result.password;
           setUser(result.email);
-          setPassword(result.password);
+          if (pwd === usrPassword) {
+            setPassword(result.password);
+          }
           setLoad(true);
         })
         .catch((error) => setError(error));
@@ -70,7 +73,8 @@ export default function SignIn() {
   return (
     <ThemeProvider theme={theme}>
       {error && <DangerAlert />}
-      {user && password && <Navigate to={`/evaluation/${user}`} />}
+      {user && <Navigate to={`/evaluation/${user}`} />}
+      {user && password ? <Navigate to={`/evaluation/${user}`} /> : ""}
       {load && <Spinner />}
       <Container component="main" maxWidth="xs">
         <CssBaseline />

@@ -64,7 +64,7 @@ function NavBar({ params }) {
         </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signin">
-            {email === "email" ? `Sign In` : `Sign Out`}
+            {email === "email" ? `Sign Out` : `Sign In`}
           </NavBtnLink>
         </NavBtn>
       </Nav>
