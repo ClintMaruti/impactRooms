@@ -11,7 +11,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Evaluation />} />
+        <Route path="/" element={<SignIn />} />
         <Route path="/evaluation/:email" element={<Evaluation />} />
         <Route path="/signin" element={<SignPage />} />
       </Routes>
