@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getData } from "../../utils/api";
 import { Navigate } from "react-router-dom";
 import DangerAlert from "../Alert";
+import Spinner from "../Spinner";
 
 function Copyright(props) {
   return (
@@ -39,6 +40,7 @@ const theme = createTheme();
 export default function SignIn() {
   const [user, setUser] = React.useState(null);
   const [error, setError] = React.useState(null);
+  const [load, setLoad] = React.useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -55,6 +57,7 @@ export default function SignIn() {
         .then((data) => {
           const result = data.find((record) => record.email === email);
           setUser(result.email);
+          setLoad(true);
         })
         .catch((error) => setError(error));
     } catch (error) {
@@ -66,6 +69,7 @@ export default function SignIn() {
     <ThemeProvider theme={theme}>
       {error && <DangerAlert />}
       {user && <Navigate to={`/evaluation/${user}`} />}
+      {load && <Spinner />}
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
