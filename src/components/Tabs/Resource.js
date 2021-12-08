@@ -7,7 +7,7 @@ const Resources = () => {
     <ProfileCard>
       <div>
         <ComingSoonInner>
-          <h1>Coming Soon</h1>
+          <h5>Coming Soon</h5>
         </ComingSoonInner>
         <BlurSection>
           <img src={resources} alt="Evaluation" />

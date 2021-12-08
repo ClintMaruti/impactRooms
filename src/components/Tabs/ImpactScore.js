@@ -33,7 +33,7 @@ const ImpactScore = () => {
       </DashHeader>
       <div>
         <ComingSoon>
-          <h1>Coming Soon</h1>
+          <h5>Coming Soon</h5>
         </ComingSoon>
         <BlurSection>
           <img

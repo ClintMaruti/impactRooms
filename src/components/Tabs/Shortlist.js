@@ -7,7 +7,7 @@ const Shortlist = () => {
     <ProfileCard>
       <div>
         <ComingSoonInner>
-          <h1>Coming Soon</h1>
+          <h5>Coming Soon</h5>
         </ComingSoonInner>
         <BlurSection>
           <img src={shortlistImg} alt="Evaluation" />

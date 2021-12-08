@@ -34,7 +34,7 @@ const MarketNews = () => {
       </DashHeader>
       <div>
         <ComingSoon>
-          <h1>Coming Soon</h1>
+          <h5>Coming Soon</h5>
         </ComingSoon>
         <BlurSection>
           <img src={news} alt="news" width="500px" height="90px" />
