@@ -8,8 +8,7 @@ import {
   InfoIcon,
   ComingSoon,
 } from "./style";
-import impctNexus from "../../assets/imgs/impctNexus.png";
-import impctScr2 from "../../assets/imgs/impctScr2.png";
+
 import { Tooltip } from "@material-ui/core";
 
 const popUp = {
@@ -17,12 +16,12 @@ const popUp = {
     "Assess, forecast and improve your company’s impact with our partner Impact Nexus.",
 };
 
-const ImpactScore = () => {
+const ImpactScore = ({ images }) => {
   return (
     <DashboardCard>
       <DashHeader>
         <SpecialIcon>
-          <img src={impctNexus} alt="Nexus" width="20px" height="20px" />
+          <img src={images[0]} alt="Nexus" width="20px" height="20px" />
         </SpecialIcon>
         <Title>Impact Overview</Title>
         <Tooltip title={popUp.impctScr} placement="top">
@@ -37,7 +36,7 @@ const ImpactScore = () => {
         </ComingSoon>
         <BlurSection>
           <img
-            src={impctScr2}
+            src="https://boring-hoover-0cce7e.netlify.app/static/media/impctScr2.8f10b462.png"
             alt="Impact Score"
             width="1000px"
             height="100px"

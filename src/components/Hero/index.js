@@ -11,7 +11,6 @@ import {
   EditProfile,
   CompanyName,
 } from "./styles";
-import cart from "../../assets/imgs/cns-logo.png";
 import { Tooltip } from "@material-ui/core";
 import styled from "styled-components";
 
@@ -44,21 +43,6 @@ const Hero = ({ data }) => {
           </div>
           <div style={{ display: "flex" }}>
             <Status>In Que</Status>
-            <div>
-              <Tooltip title={popUp.inQue}>
-                <p
-                  style={{
-                    paddingLeft: "5px",
-                    color: "#909090",
-                    marginTop: "-3px",
-                    zIndex: "9999",
-                  }}
-                >
-                  &#9432;
-                </p>
-              </Tooltip>
-            </div>
-
             <CompanyID> {`Company ID: ${data?.email}`} </CompanyID>
           </div>
         </CompanySection>

@@ -14,6 +14,16 @@ import ImpactScore from "./ImpactScore";
 import Evaluation from "./Evaluation";
 import Resources from "./Resource";
 import Shortlist from "./Shortlist";
+import news from "../../assets/imgs/news.png";
+import news1 from "../../assets/imgs/news1.jpeg";
+import impctNexus from "../../assets/imgs/impctNexus.png";
+import impctScr2 from "../../assets/imgs/impctScr2.png";
+import evalImage from "../../assets/imgs/evaluation.JPG";
+import resources from "../../assets/imgs/resource.JPG";
+import shortlistImg from "../../assets/imgs/shortlist.JPG";
+
+const MarktScrImg = [news, news1];
+const ImpctScrImg = [impctNexus, impctScr2];
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -90,21 +100,21 @@ export default function EvaluationTabs({ data }) {
           <CompanyInformation data={data} />
           <div>
             <Dashboard data={data} />
-            <MarketNews />
-            <ImpactScore />
+            <MarketNews images={MarktScrImg} />
+            <ImpactScore images={ImpctScrImg} />
           </div>
         </ProfileCard>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ProfileCard>
-          <Evaluation />
+          <Evaluation image={evalImage} />
         </ProfileCard>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Shortlist />
+        <Shortlist image={shortlistImg} />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Resources />
+        <Resources image={resources} />
       </TabPanel>
     </div>
   );

@@ -9,8 +9,7 @@ import {
   ComingSoon,
 } from "./style";
 import Innovesta from "../../assets/imgs/Innovesta.png";
-import news from "../../assets/imgs/news.png";
-import news1 from "../../assets/imgs/news1.jpeg";
+
 import { Tooltip } from "@material-ui/core";
 
 const popUp = {
@@ -18,7 +17,7 @@ const popUp = {
     "Get relevant and real-time updates on your market with our partner Innovesta.",
 };
 
-const MarketNews = () => {
+const MarketNews = ({ images }) => {
   return (
     <DashboardCard>
       <DashHeader>
@@ -37,8 +36,18 @@ const MarketNews = () => {
           <h5>Coming Soon</h5>
         </ComingSoon>
         <BlurSection>
-          <img src={news} alt="news" width="500px" height="90px" />
-          <img src={news1} alt="news" width="500px" height="80px" />
+          <img
+            src="https://boring-hoover-0cce7e.netlify.app/static/media/news.fe638677.png"
+            alt="news"
+            width="500px"
+            height="90px"
+          />
+          <img
+            src="https://boring-hoover-0cce7e.netlify.app/static/media/news1.220f9908.jpeg"
+            alt="news"
+            width="500px"
+            height="80px"
+          />
         </BlurSection>
       </div>
     </DashboardCard>

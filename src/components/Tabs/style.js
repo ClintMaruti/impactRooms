@@ -14,9 +14,6 @@ export const CompanyInfoCard = styled.div`
   margin-left: 25px;
   color: #3c4050;
   font-size: 12px;
-  @media screen and (min-width: 768px) {
-    width: 700px;
-  }
 `;
 
 export const CompanyInfo = styled.div`
@@ -58,15 +55,12 @@ export const DashboardCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e5e5;
-  max-width: 2400px;
+  max-width: 1300px;
   margin-left: 25px;
   color: #3c4050;
   font-size: 12px;
   /* height: 200px; */
   margin-bottom: 10px;
-  @media screen and (min-width: 1444px) {
-    width: 1200px;
-  }
 `;
 
 export const DashHeader = styled.div`

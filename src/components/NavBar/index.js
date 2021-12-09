@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Nav,
   NavLink,
@@ -33,10 +33,14 @@ function NavBar({ params }) {
               Home
             </a>
           </NavItem>
-          <NavLink to="/evaluation/:email" activeStyle>
-            Companies
-          </NavLink>
-
+          <NavItem>
+            <a
+              href="https://impactrooms.com/companies/"
+              style={{ textDecoration: "none", color: "#3c4050" }}
+            >
+              Companies
+            </a>
+          </NavItem>
           <NavItem>
             <a
               href="https://impactrooms.com/investors/"
@@ -54,11 +58,9 @@ function NavBar({ params }) {
             </a>
           </NavItem>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">
-            {email === "email" ? `Sign Out` : `Sign In`}
-          </NavBtnLink>
-        </NavBtn>
+        {/* <NavBtn>
+          <NavBtnLink to="/signin">" "</NavBtnLink>
+        </NavBtn> */}
       </Nav>
     </>
   );

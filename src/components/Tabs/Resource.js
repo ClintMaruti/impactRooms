@@ -1,8 +1,7 @@
 import React from "react";
-import resources from "../../assets/imgs/resource.JPG";
 import { BlurSection, ComingSoonInner, ProfileCard } from "./style";
 
-const Resources = () => {
+const Resources = ({ image }) => {
   return (
     <ProfileCard>
       <div>
@@ -10,7 +9,10 @@ const Resources = () => {
           <h5>Coming Soon</h5>
         </ComingSoonInner>
         <BlurSection>
-          <img src={resources} alt="Evaluation" />
+          <img
+            src="https://boring-hoover-0cce7e.netlify.app/static/media/resource.36fb64dc.JPG"
+            alt="Evaluation"
+          />
         </BlurSection>
       </div>
     </ProfileCard>

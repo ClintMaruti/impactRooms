@@ -1,8 +1,7 @@
 import React from "react";
-import shortlistImg from "../../assets/imgs/shortlist.JPG";
 import { ProfileCard, BlurSection, ComingSoonInner } from "./style";
 
-const Shortlist = () => {
+const Shortlist = ({ image }) => {
   return (
     <ProfileCard>
       <div>
@@ -10,7 +9,10 @@ const Shortlist = () => {
           <h5>Coming Soon</h5>
         </ComingSoonInner>
         <BlurSection>
-          <img src={shortlistImg} alt="Evaluation" />
+          <img
+            src="https://boring-hoover-0cce7e.netlify.app/static/media/shortlist.5206afe8.JPG"
+            alt="Evaluation"
+          />
         </BlurSection>
       </div>
     </ProfileCard>

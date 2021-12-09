@@ -35,6 +35,22 @@ function Copyright(props) {
   );
 }
 
+function SignUp(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      <Link color="inherit" href="https://impactrooms.com/companies/">
+        Don't have an account? Click here to Register
+      </Link>
+      {new Date().getFullYear()}
+    </Typography>
+  );
+}
+
 const theme = createTheme();
 
 export default function SignIn() {
@@ -45,18 +61,13 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    // console.log({
-    //   email: data.get("email"),
-    //   password: data.get("password"),
-    // });
-    // data.list.find( record => record.name === "my Name")
     const email = data.get("email");
     const usrPassword = data.get("password");
     try {
       getData()
         .then((data) => {
           const result = data.find((record) => record.email === email);
+          console.log(result);
           const pwd = result.password;
           setUser(result.email);
           if (pwd === usrPassword) {
@@ -129,6 +140,7 @@ export default function SignIn() {
             </Button>
           </Box>
         </Box>
+        <SignUp sx={{ mt: 4, mb: 2 }} />
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
